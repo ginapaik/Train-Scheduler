@@ -1,0 +1,26 @@
+body {
+    background: url(../images/flowertrail.png)
+}
+
+.jumbotron {
+    background-color: #28325a;
+    color: white;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #28325a;
+    border-color: white;
+}
+
+.panel-primary {
+    border-color: #28325a;
+}
+
+#add-train-btn {
+    background-color: #28325a;
+    border-color: #28325a;
+}
+
+#add-train-btn:hover {
+    background-color: rgb(62, 154, 190);
+}
