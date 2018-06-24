@@ -45,6 +45,7 @@ var config = {
     return false;
   });
   
+  // Adds the user data and calculates the time and minutes remaining
   trainData.ref().on("child_added", function(childSnapshot, prevChildKey) {
   
     console.log(childSnapshot.val());
@@ -73,11 +74,11 @@ var config = {
     console.log("tArrival:", tArrival);
 
 
-    // New rows are appended to the table
+    // New rows are appended to the table. A remove button will also be added to each row
     $("#train-table > tbody").append("<tr><td>" + tName + "</td><td>" + tDestination + "</td><td>" +
-            tFrequency + "</td><td>" + tArrival + "</td><td>" + tMinutes + "</td><td>" + "<input type='submit' value='Remove' class='remove-train btn btn-sm'>" + "</td></tr>");
+            tFrequency + "</td><td>" + tArrival + "</td><td>" + tMinutes + "</td><td>" + "<input type='submit' value='Remove' class='remove-train btn'>" + "</td></tr>");
 
-            // This function will remove the table row when "remove" button is clicked
+            // When the "remove" button is clicked, it will delete/remove that particular row
             $(".remove-train").click(function(){
               $(this).parents('tr').first().remove();
           });

@@ -19,6 +19,7 @@ body {
 #add-train-btn {
     background-color: #28325a;
     border-color: #28325a;
+    color: white;
 }
 
 #add-train-btn:hover {
